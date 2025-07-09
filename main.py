@@ -1,24 +1,15 @@
 from djitellopy import Tello as t
 import time
 import math
+
+#Importing functions from different files
 from preflight import preFlight
 from take_pic import takePic
 from stream import Stream
+from scanPad+TakePhoto import scanAndPhoto
 
 import threading
 
-# def preFlight():
-#     d = t()
-#     d.connect()
-#     if d.get_battery() < 10:
-#         print("Battery is low")
-#         return False, d
-#     elif d.get_temperature() > 100:
-#         print("Overheat warning")
-#         print(d)
-#         return False, d
-#     else:
-#         return True, d
 
 def getTime(func):
     def wrapper(*args):
@@ -28,9 +19,11 @@ def getTime(func):
         print(f"Took {end-start} seconds to run")
     return wrapper
 
+
+#---------------------------------Main----------------------------------
 @getTime #get runtime for code
 def main(d):
-
+    scanAndPhoto(d)
         
 
 #slayyy - ryu
@@ -51,8 +44,6 @@ if canFly:
     t1.join()
     t2.join()
 
-else:
-    pass
         
 
 
