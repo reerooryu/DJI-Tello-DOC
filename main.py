@@ -6,7 +6,7 @@ import math
 from preflight import preFlight
 from take_pic import takePic
 from stream import Stream
-from scanPad+TakePhoto import scanAndPhoto
+from scanAndPhoto import scanAndPhoto
 
 import threading
 
@@ -23,7 +23,8 @@ def getTime(func):
 #---------------------------------Main----------------------------------
 @getTime #get runtime for code
 def main(d):
-    scanAndPhoto(d)
+    Stream()
+    
         
 
 #slayyy - ryu

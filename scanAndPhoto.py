@@ -1,4 +1,5 @@
 from preflight import preFlight
+from take_pic import takePic
 import time
 
 
