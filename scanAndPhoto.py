@@ -22,9 +22,10 @@ def scanAndPhoto(d):
     completed = False
 
     for pad in pads:
-        d.go_xyz_speed(0,0,0, 30, pad)
+        d.go_xyz_speed_mid(0, 0, qrHeight, 30, pad)
         time.sleep(1)
 
+    d.land()
 
 
 
