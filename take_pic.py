@@ -25,7 +25,7 @@ def takePic(tel):
         
         #take a picture (with timestamps)
         frame = tel.get_frame_read().frame
-        timestamp = time.strftime("&Y%m%d_%H%M%S")
+        timestamp = time.strftime("%Y%m%d_%H%M%S")
         filename = f"tello_{timestamp}.jpg"
         filepath = os.path.join(dir,filename)
         
