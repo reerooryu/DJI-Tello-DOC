@@ -6,10 +6,10 @@ import os
 from preflight import preFlight
 
 def Stream(tel):
-
+    tel.streamon()
     while True:
             #-------STREAM TO PC----------
-        tel.streamon()
+        
         frame = tel.get_frame_read().frame
 
         frame = cv2.resize(frame, (960, 720))

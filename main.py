@@ -1,6 +1,9 @@
 from djitellopy import Tello as t
 import time
 import math
+import logging
+logging.getLogger("djitellopy").setLevel(logging.ERROR)
+
 
 #Importing functions from different files
 from preflight import preFlight
@@ -23,7 +26,7 @@ def getTime(func):
 #---------------------------------Main----------------------------------
 @getTime #get runtime for code
 def main(d):
-    Stream()
+    scanAndPhoto(d)
     
         
 
