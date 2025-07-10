@@ -23,13 +23,17 @@ def scanAndPhoto(d):
     pads = [1, 6, 3,7]
 
     completed = False
-
-    print(d.get_mission_pad_id())
-    d.move_forward(80)
-    d.go_xyz_speed_mid(0, 0, qrHeight, 30, pad) #- This commands sucks from long range, use to adjust minor flight inaccuracies :)
-    time.sleep(1)
-    takePic(d)
-    time.sleep(1)
+    for index, pad in enumerate(pads):
+        if index == 0:
+            d.move_forward(80)
+        else:
+            d.move_forward(160)
+        d.go_xyz_speed_mid(0, 0, qrHeight, 30, pad) #- This commands sucks from long range, use to adjust minor flight inaccuracies :)
+        print(d.get_mission_pad_id())
+        time.sleep(1)
+        takePic(d)
+        time.sleep(1)
+        d.rotate_counter_clockwise(90)
 
     d.land()
 
