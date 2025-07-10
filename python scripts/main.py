@@ -6,7 +6,7 @@ logging.getLogger("djitellopy").setLevel(logging.ERROR)
 
 
 #Importing functions from different files
-from preflight import preFlight
+from scripts.preflight import preFlight
 from take_pic import takePic
 from stream import Stream
 from scanAndPhoto import scanAndPhoto

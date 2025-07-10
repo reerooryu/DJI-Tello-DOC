@@ -3,7 +3,7 @@ import cv2
 import time
 import os
 
-from preflight import preFlight
+from scripts.preflight import preFlight
 
 def Stream(tel):
     tel.streamon()
